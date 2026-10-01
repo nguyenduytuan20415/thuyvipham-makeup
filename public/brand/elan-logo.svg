@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="ÉLAN BEAUTY logo">
+  <!-- Stacked lockup: mark + wordmark + descriptor. Text inherits page font; gold ring fixed. -->
+  <g transform="translate(136,6)">
+    <circle cx="24" cy="24" r="22.5" fill="none" stroke="#B9975B" stroke-width="1.5"/>
+    <text x="24" y="36" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="500" fill="currentColor">É</text>
+    <circle cx="24" cy="44" r="1.4" fill="#B9975B"/>
+  </g>
+  <text x="160" y="82" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="500" letter-spacing="6" fill="currentColor">ÉLAN BEAUTY</text>
+  <text x="160" y="102" text-anchor="middle" font-family="'Jost', system-ui, sans-serif" font-size="10.5" font-weight="400" letter-spacing="5.5" fill="#B9975B">STUDIO · ACADEMY</text>
+</svg>

@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #faf7f2;
+  --gold: #b9975b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory text-espresso font-sans antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #2b2118;
+  color: #faf7f2;
+}
+
+/* thin luxury scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f4eee5; }
+::-webkit-scrollbar-thumb { background: #c9b291; border-radius: 8px; }
+
+/* film grain — fixed overlay only */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.font-serif { font-family: '"Cormorant Garamond"', 'Playfair Display', Georgia, serif; }
+
+.headline-serif {
+  font-family: '"Cormorant Garamond"', Georgia, serif;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+/* visible keyboard focus — gold ring, never removed */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #b9975b;
+  outline-offset: 3px;
+}
+
+/* avoid white flash while photos load */
+img {
+  background-color: #e8dcc8;
+}
+img[src*='avatar'], .bg-ink img {
+  background-color: #2b2118;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-line {
+  position: relative;
+  overflow: hidden;
+}
+.btn-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 1px; width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.btn-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.img-zoom img { transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+.img-zoom:hover img { transform: scale(1.06); }
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+input, select, textarea {
+  outline: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #b9975b !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

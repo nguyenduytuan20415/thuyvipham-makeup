@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 322" role="img" aria-label="Thuy Vi Pham — Makeup Artist logo">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Pinyon+Script&amp;family=Jost:wght@500&amp;display=swap');
+  </style>
+  <rect width="680" height="322" fill="#F1ECE7"/>
+
+  <!-- 1. Large serif TV monogram, slightly above vertical center -->
+  <text x="340" y="208" text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, serif" font-size="220" font-weight="500"
+        letter-spacing="-14" fill="#A27B5F">TV</text>
+
+  <!-- 3. Thin sweeping decorative stroke across the upper signature area -->
+  <path d="M 118 128 C 240 100, 430 102, 566 126"
+        fill="none" stroke="#5D554A" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- 2. Handwritten signature overlapping the TV -->
+  <text x="340" y="182" text-anchor="middle"
+        font-family="'Pinyon Script', cursive" font-size="72" fill="#5D554A">Thuy Vi Pham</text>
+
+  <!-- 4. Bottom descriptor -->
+  <text x="344" y="282" text-anchor="middle"
+        font-family="'Jost', system-ui, sans-serif" font-size="17" font-weight="500"
+        letter-spacing="9" fill="#5D554A">MAKEUP ARTIST</text>
+</svg>
